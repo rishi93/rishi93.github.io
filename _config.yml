@@ -28,7 +28,8 @@ url: "https://rishi93.github.io" # the base hostname & protocol for your site, e
 repository: rishi93/rishi93.github.io
 
 # Build settings
-theme: minimal-mistakes-jekyll
+# theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
 
