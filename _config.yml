@@ -24,9 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is just an online space to collect all my notes taken during learning stuff.
   Could be programming, could be other stuff too.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://rishi93.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository: rishi93/rishi93.github.io
 
 # Build settings
 theme: minimal-mistakes-jekyll
