@@ -5,11 +5,14 @@ date: 2023-06-13
 tags: programming
 ---
 
-* A parser turns a list of tokens into an Abstract Syntax Tree (AST).
+> A parser turns a list of tokens into an Abstract Syntax Tree (AST).
+
+## Why do we need an Abstract Syntax Tree (AST)?
 * Abstract Syntax Tree (AST) -> A representation for code
 * We want to turn the list of tokens into something easier for the interpreter to
 consume.
 
+## Example:
 For example: If we wanted to evaluate: 
 avg = (min + max) / 2
 
@@ -19,6 +22,7 @@ to describe it (insert tree diagram here)
 * We need to evaluate the subtrees first, and work our way up from the leaves to the
 root - a post order traversal.
 
+## Grammar
 * The grammatical structure of the language. We move one level up the Chomsky
 hierarchy.
 
@@ -53,5 +57,16 @@ literal         ->      NUMBER | STRING | "true" | "false" | "nil";
 unary           ->      ( "-" | "!" ) expression;
 binary          ->      expression operator expression;
 operator        ->      "==" | "!=" | "<" | "<=" | ">" | ">=" | "+" | "-" | "*" | "/";
-grouping        ->      "(" expression ")"
+grouping        ->      "(" expression ")";
+```
+
+Remove ambiguity:
+```C
+expression      ->      equality ;
+equality        ->      comparison ( ("!=" | "==") comparison)* ;
+comparison      ->      term ( (">" | ">=" | "<" | "<=") term)* ;
+term            ->      factor ( ("-" | "+") factor)* ;
+factor          ->      unary ( ("/" | "*") unary)* ;
+unary           ->      ("!" | "-" ) unary | primary;
+primary         ->      NUMBER | STRING | "true" | "false" | "nil" | "(" expression ")" ;
 ```

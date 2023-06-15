@@ -9,5 +9,10 @@ tags: links
 internet
 
 # June 2023
+2023-06-12
+[The surprising power of documentation](https://vadimkravcenko.com/shorts/proper-documentation/)
+
 2023-06-13
 [In praise of blowing up your life](https://sashachapin.substack.com/p/in-praise-of-blowing-up-your-life)
+
+2023-06-14
